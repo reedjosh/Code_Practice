@@ -7,20 +7,19 @@ using namespace std;
 
 class Solution{
 public:
-    int subarraySum(vector<int>& nums, int k){
-        map<int, int> a_map;
-        int running_sum = 0, needed = 0, sub_arrs = 0;
+int subarraySum(vector<int>& nums, int k){
+    map<int, int> a_map;
+    int running_sum = 0, needed = 0, sub_arrs = 0;
 
-        for (int i = 0; i <= nums.size(); i++){  
-            needed = running_sum - k; // Amount to remove from running sum to equal k.
-            sub_arrs += a_map[needed]; // Add ways needed can be made in previous arr.
-            a_map[running_sum]++; // Add the running sum to the map.
-            running_sum += nums[i]; // Manage running sum.
-            }
-        
-        
-        return sub_arrs;
+    for (int i = 0; i <= nums.size(); i++){  
+        needed = running_sum - k; // Amount to remove from running sum to equal k.
+        sub_arrs += a_map[needed]; // Add ways needed can be made in previous arr.
+        a_map[running_sum]++; // Add the running sum to the map.
+        running_sum += nums[i]; // Manage running sum.
         }
+    
+    return sub_arrs;
+    }
     };
 
 void print_vec(vector<int> arr){
