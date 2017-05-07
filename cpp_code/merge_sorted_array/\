@@ -1,0 +1,32 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+void print(vec){
+    for(auto: vec)
+        cout << vec;
+    }
+
+class Solution{
+public:
+    void merge(vector<int>& nums1, int m, vector<int>& nums2, int n){
+        for (int i=0; i<m+n; i++){
+            if (nums1[i] > nums2[i])
+                nums1.insert(nums1.begin()+i, nums2[i]);
+                print(vec);
+            }
+        
+        
+        }
+    };
+
+int main(void){
+    Solution solution;
+    vector<int> in_vec_a, in_vec_b;
+    
+    in_vec_a = {1, 2, 5};
+    in_vec_b = {-4, -3, 2, 4};
+
+    solution.merge(in_vec_a, in_vec_a.size(), in_vec_b, in_vec_b.size());
+    }
